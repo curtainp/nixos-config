@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  environment.variables.EDITOR = "nvim --clean";
+  environment.variables.EDITOR = "nvim";
 
   environment.systemPackages = with pkgs; [
     tealdeer # faster tldr

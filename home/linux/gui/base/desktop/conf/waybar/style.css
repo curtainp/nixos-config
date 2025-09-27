@@ -1,5 +1,5 @@
 * {
-	font-size: 12px;
+	font-size: 15px;
 	font-family: "JetBrainsMono Nerd Font";
 	font-weight: bold;
 }
@@ -42,6 +42,18 @@
     border: 2px;
     border-radius: 5px;
     background: #24283B;
+}
+
+#taskbar button:hover {
+    background-color: rgba(49, 50, 68, 0.6);
+}
+
+#taskbar button.active {
+    background-color: rgba(88, 91, 112, 0.6);
+}
+
+#taskbar button.active:hover {
+    background-color: rgba(108, 112, 134, 0.6);
 }
 
 #custom-launcher {

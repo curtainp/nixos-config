@@ -98,7 +98,7 @@
     plugins = with pkgs; [
       tmuxPlugins.vim-tmux-navigator
       tmuxPlugins.sensible
-      tmuxPlugins.tmux-yank
+      tmuxPlugins.tmux-thumbs # prefix + space to copy/paste the pattern that highlight
       # tmuxPlugins.tokyo-night-tmux
     ];
   };

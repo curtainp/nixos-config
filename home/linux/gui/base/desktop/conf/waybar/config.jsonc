@@ -2,7 +2,7 @@
   "position": "top",
   "layer": "top",
 
-  "modules-left": ["custom/launcher", "temperature", "niri/workspaces"],
+  "modules-left": ["custom/launcher", "niri/workspaces", "wlr/taskbar"],
   "modules-center": ["custom/playerctl"],
   "modules-right": [
     "pulseaudio",
@@ -15,6 +15,12 @@
     "custom/powermenu",
     "tray",
   ],
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "tooltip-format": "{title} | {app_id}",
+    "on-click": "activate",
+    "on-click-right": "fullscreen",
+  },
   "niri/workspaces": {
     "format": "{}",
     "format-icons": {
@@ -91,8 +97,8 @@
   "network": {
     "interval": 5,
     "format": "{ifname}",
-    "format-wifi": "  {signalStrength}% Down: {bandwidthDownBytes} Up: {bandwidthUpBytes} {essid}",
-    "format-ethernet": "  {ifname} Down: {bandwidthDownBytes} Up: {bandwidthUpBytes}",
+    "format-wifi": "  {bandwidthDownBytes} 🡻/🢁 {bandwidthUpBytes} {essid}",
+    "format-ethernet": "  {ifname} {bandwidthDownBytes} 🡻/🢁 {bandwidthUpBytes}",
     "format-disconnected": "Disconnected ⚠",
     "tooltip-format": " {ifname} via {gwaddri}",
     "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nDown: {bandwidthDownBytes} Up: {bandwidthUpBytes}",
@@ -134,7 +140,7 @@
     "format-icons": ["", "", "", "", "", "", "", "", ""],
   },
   "tray": {
-    "icon-size": 20,
+    // "icon-size": 20,
     "spacing": 10,
   },
   "battery": {
