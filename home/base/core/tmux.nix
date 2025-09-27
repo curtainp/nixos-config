@@ -62,6 +62,26 @@
       # -----------------------
       set -g status-justify left
       set -g status-position top
+      set -g status-bg '#282c34'
+      set -g status-fg '#cdd6f4'
+
+      set -g copy-mode-match-style 'fg=#1e1e2e,bg=#cdd6f4'
+      set -g copy-mode-current-match-style 'fg=#1e1e2e,bg=#d20f39'
+
+# set color for status bar
+      set -g pane-border-style 'fg=#45475a'
+      set -g pane-active-border-style 'fg=#f9e2af'
+
+      set -g window-status-style 'fg=#585b70'
+      set -g window-status-current-style 'fg=#f9e2af'
+
+      set -g window-status-format '#{?#{==:#{window_index},1},󰬺 ,#{?#{==:#{window_index},2},󰬻 ,#{?#{==:#{window_index},3},󰬼 ,#{?#{==:#{window_index},4},󰬽 ,#{?#{==:#{window_index},5},󰬾 ,#{?#{==:#{window_index},6},󰬿 ,#{?#{==:#{window_index},7},󰭀 ,#{?#{==:#{window_index},8},󰭁 ,#{?#{==:#{window_index},9},󰭂 ,󰿩 }}}}}}}}}#W#{?window_zoomed_flag, 󰁌 , }'
+      set -g window-status-current-format '#{?#{==:#{window_index},1},󰬺 ,#{?#{==:#{window_index},2},󰬻 ,#{?#{==:#{window_index},3},󰬼 ,#{?#{==:#{window_index},4},󰬽 ,#{?#{==:#{window_index},5},󰬾 ,#{?#{==:#{window_index},6},󰬿 ,#{?#{==:#{window_index},7},󰭀 ,#{?#{==:#{window_index},8},󰭁 ,#{?#{==:#{window_index},9},󰭂 ,󰿩 }}}}}}}}}#W#{?window_zoomed_flag, 󰁌 , }'
+
+      set -g status-left-length 70
+      set -g status-left "#{?client_prefix,#[fg=#f9e2af bg=#282c34],#[fg=#e5c07b]} ❐ #S "
+      set -g status-right ""
+
             #bind C-p display-popup -E "ipython"
             bind C-r display-popup \
               -d "#{pane_current_path}" \
@@ -78,7 +98,8 @@
     plugins = with pkgs; [
       tmuxPlugins.vim-tmux-navigator
       tmuxPlugins.sensible
-      tmuxPlugins.tokyo-night-tmux
+      tmuxPlugins.tmux-yank
+      # tmuxPlugins.tokyo-night-tmux
     ];
   };
 }
