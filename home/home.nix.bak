@@ -1,0 +1,166 @@
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
+  nixpkgs = {
+    overlays = [
+      outputs.overlays.unstable-packages
+    ];
+    config = {
+      nvidia.acceptLicense = true;
+      allowUnfree = true;
+      cudaSupport = false;
+      permittedInsecurePackages = [
+        # FIXME: change it according custom softwares
+        "electron-27.3.11"
+        "electron-32.3.3"
+      ];
+    };
+  };
+
+  home.packages = with pkgs; [
+    comma # run command without install it: , <command>
+    gthumb # image viewer for gnome
+    ungoogled-chromium
+    unstable.quickemu
+    ##### video editor #####
+    # unstable.davinci-resolve
+    # shotcut
+    # blender
+    fuzzel # rofi like wayland application launcher
+    age # modern encryption tools
+    kitty
+    uv
+    alejandra # nix formatter
+    psmisc # useful tools for proc system: fuser, killall, pstree
+    amdgpu_top
+    xwayland-satellite
+    unstable.rfc # rfc <rfc number>
+    discord
+    brave
+    flameshot # powerful screenshot
+    hugo
+    nuclear # music player focus on free source
+    osdlyrics # standalone lyrics fetcher/displayer
+    patchelf
+    pandoc
+    peek # gif recorder
+    piper-tts # fast neural text speech system
+    qrcp # transfer files over wifi by scanning QR code
+    qrscan
+    qrencode
+    ruff
+    scrcpy # display and control android devices over usb and tcp/ip
+    sdcv
+    shellcheck
+    shfmt
+    spotdl # download spotify playlists and songs
+    spotify
+    spotify-player # tui version
+    sqlite
+    sysstat
+    syncthing # continuous file sync
+    tree-sitter
+    tree-sitter-grammars.tree-sitter-markdown
+    nix-search-cli
+    obs-cmd
+    qbittorrent
+    unzip
+    variety # wallpaper manager
+    vimpager
+    vlc
+    wev # wayland event viewer
+    wl-clipboard
+    wmctrl
+    yaml-language-server
+    yq
+    yt-dlp
+    ytmdl # youtube music download
+    zip
+    zsh
+    zsh-autosuggestions
+    zsh-fast-syntax-highlighting
+    zsh-autopair
+    zsh-fzf-tab
+    zsh-nix-shell
+  ];
+  fonts = {
+    fontconfig = {
+      enable = true;
+      defaultFonts = {
+        emoji = [ "Noto Sans Emoji" ];
+        monospace = [ "JetBrainsMono Nerd Font" ];
+        sansSerif = [ "Note Sans" ];
+        serif = [ "Note Serif" ];
+      };
+    };
+  };
+
+
+    chromium = {
+      enable = true;
+      package = pkgs.ungoogled-chromium;
+      extensions =
+        let
+          createChromiumExtensionFor =
+            browserVersion:
+            {
+              id,
+              sha256,
+              version,
+            }:
+            {
+              inherit id;
+              crxPath = builtins.fetchurl {
+                url = "https://clients2.google.com/service/update2/crx?response=redirect&acceptformat=crx2,crx3&prodversion=${browserVersion}&x=id%3D${id}%26installsource%3Dondemand%26uc";
+                name = "${id}.crx";
+                inherit sha256;
+              };
+              inherit version;
+            };
+          createChromiumExtension = createChromiumExtensionFor (
+            lib.versions.major pkgs.ungoogled-chromium.version
+          );
+        in
+        [
+          (createChromiumExtension {
+            # ublock origin
+            id = "cjpalhdlnbpafiamejdnhcphjbkeiagm";
+            sha256 = "sha256:054kqrai2kd89bzc5c3x17rjfdil2zzxrxrg65vaywmvm77y7kmn";
+            version = "1.66.4";
+          })
+          (createChromiumExtension {
+            # darker reader
+            id = "eimadpbcbfnmbkopoojfekhnkhdbieeh";
+            sha256 = "sha256:1i8rs6bcblx4d85rh41pmky3hhlpzn5977lpz5zmhwri7sb77yzk";
+            version = "4.9.110";
+          })
+          (createChromiumExtension {
+            # saladict
+            id = "cdonnmffkdaoajfknoeeecmchibpmkmg";
+            sha256 = "sha256:1l6xvb58spi1x03458wq1yx32iys990kwaqwnnxwdq53kw3v1fvf";
+            version = "7.20.0";
+          })
+          (createChromiumExtension {
+            # keepassxc-browser
+            id = "oboonakemofpalcgghocfoadofidjkkk";
+            sha256 = "sha256:0hzcxgdv7xa97qvm1yc64agyg6pvhds0nfwhkx36ndk28db93w1p";
+            version = "1.9.9.6";
+          })
+        ];
+    };
+
+    nix-index = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
+
+
+  };
+}

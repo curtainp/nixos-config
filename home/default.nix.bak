@@ -1,0 +1,96 @@
+{ pkgs, ... }:
+{
+  imports = [
+    ./bash.nix
+    ./bat.nix
+    ./btop.nix
+    ./eza.nix
+    ./fzf.nix
+    ./git.nix
+    ./gtk.nix
+    ./qt.nix
+    ./htop.nix
+    ./kitty.nix
+    ./obs-studio.nix
+    # ./rofi
+    # ./stylix.nix
+    ./tmux.nix
+    ./xdg.nix
+    ./yazi
+    ./zoxide.nix
+    ./zsh
+  ];
+  home.username = "curtain";
+  home.homeDirectory = "/home/curtain";
+  home.stateVersion = "25.05";
+  programs = {
+    home-manager.enable = true;
+  };
+  nixpkgs.config.allowUnfree = true;
+  services = {
+    dropbox.enable = true;
+  };
+  home.packages = with pkgs; [
+    comma # run command without install it: , <command>
+    gthumb # image viewer for gnome
+    ungoogled-chromium
+    quickemu
+    ##### video editor #####
+    # unstable.davinci-resolve
+    # shotcut
+    # blender
+    age # modern encryption tools
+    kitty
+    uv
+    alejandra # nix formatter
+    psmisc # useful tools for proc system: fuser, killall, pstree
+    amdgpu_top
+    xwayland-satellite
+    rfc # rfc <rfc number>
+    discord
+    brave
+    flameshot # powerful screenshot
+    hugo
+    nuclear # music player focus on free source
+    osdlyrics # standalone lyrics fetcher/displayer
+    patchelf
+    pandoc
+    peek # gif recorder
+    piper-tts # fast neural text speech system
+    qrcp # transfer files over wifi by scanning QR code
+    qrscan
+    qrencode
+    ruff
+    scrcpy # display and control android devices over usb and tcp/ip
+    sdcv
+    shellcheck
+    shfmt
+    spotdl # download spotify playlists and songs
+    spotify
+    spotify-player # tui version
+    sqlite
+    sysstat
+    syncthing # continuous file sync
+    tree-sitter
+    tree-sitter-grammars.tree-sitter-markdown
+    nix-search-cli
+    obs-cmd
+    qbittorrent
+    variety # wallpaper manager
+    vimpager
+    vlc
+    wev # wayland event viewer
+    wl-clipboard
+    wmctrl
+    yaml-language-server
+    yq
+    yt-dlp
+    ytmdl # youtube music download
+    zsh
+    zsh-autosuggestions
+    zsh-fast-syntax-highlighting
+    zsh-autopair
+    zsh-fzf-tab
+    zsh-nix-shell
+  ];
+}
