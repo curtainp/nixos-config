@@ -4,7 +4,7 @@
   lib,
   myvars,
   ...
-}:
+}@inputs:
 with lib;
 let
   cfgWayland = config.modules.desktop.wayland;

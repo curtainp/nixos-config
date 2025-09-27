@@ -57,12 +57,12 @@ niri: {
         (leaf "center-focused-column" "never")
       ])
 
-      (plain "cursor" [
+      # (plain "cursor" [
         # Change the theme and size of the cursor as well as set the
         # `XCURSOR_THEME` and `XCURSOR_SIZE` env variables.
         # (leaf "xcursor-theme" "default")
         # (leaf "xcursor-size" 24)
-      ])
+      # ])
 
       # Uncomment this line to ask the clients to omit their client-side decorations if possible.
       # If the client will specifically ask for CSD, the request will be honored.
@@ -72,7 +72,7 @@ niri: {
       # You can change the path where screenshots are saved.
       # A ~ at the front will be expanded to the home directory.
       # The path is formatted with strftime(3) to give you the screenshot date and time.
-      (leaf "screenshot-path" "~/Pictures/Screenshots/%Y-%m-%d_%H-%M-%S.png")
+      (leaf "screenshot-path" "~/Pictures/screenshots/%Y-%m-%d_%H-%M-%S.png")
 
       # You can also set this to null to disable saving screenshots to disk.
       # (leaf "screenshot-path" null)

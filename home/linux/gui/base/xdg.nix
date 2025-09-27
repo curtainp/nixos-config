@@ -23,7 +23,7 @@
       defaultApplications =
         let
           browser = [
-            "google-chrome.desktop"
+            "ungoogled-chromium.desktop"
             "firefox.desktop"
           ];
           editor = [

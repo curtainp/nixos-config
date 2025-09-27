@@ -5,6 +5,14 @@
 }:
 {
   home.packages = with pkgs; [
+    pwntools
+    hashcat
+
+    scrypt # for android
+
+    man-pages
+    man-pages-posix
+
     podman-compose
     pandoc
     pkgs-unstable.hugo
@@ -14,7 +22,7 @@
     clang-tools
 
     uv
-    pyright
+    basedpyright
     (python313.withPackages (
       ps: with ps; [
         ruff
@@ -41,6 +49,8 @@
 
     # TODO: db related
   ];
+
+  services.dropbox.enable = true;
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;

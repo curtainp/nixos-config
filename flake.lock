@@ -281,6 +281,26 @@
         "type": "github"
       }
     },
+    "ida-pro-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1758527109,
+        "narHash": "sha256-82ibOn1D5U0FMt7a2wir7lzUl9SbJvjGIGZgUI4JGEI=",
+        "owner": "msanft",
+        "repo": "ida-pro-overlay",
+        "rev": "8581ad9182898b82a58a3a4d3a8a146ed4418dc1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "msanft",
+        "repo": "ida-pro-overlay",
+        "type": "github"
+      }
+    },
     "niri": {
       "inputs": {
         "niri-stable": "niri-stable",
@@ -493,6 +513,7 @@
         "daeuniverse": "daeuniverse",
         "haumea": "haumea",
         "home-manager": "home-manager",
+        "ida-pro-overlay": "ida-pro-overlay",
         "niri": "niri",
         "nixpkgs": "nixpkgs_3",
         "nixpkgs-stable": "nixpkgs-stable_2",

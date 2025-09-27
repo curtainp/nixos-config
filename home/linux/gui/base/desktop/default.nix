@@ -47,7 +47,42 @@
     enable = true;
     systemd.enable = true;
   };
-  programs.swaylock.enable = true;
+  programs.swaylock = {
+    enable = true;
+    settings = {
+	    ignore-empty-password = true;
+	    show-failed-attempts = true;
+	    image="$HOME/Pictures/wallpapers/mountainscapedark.jpg";
+	    scaling="fill";
+	    indicator-caps-lock = true;
+	    indicator-radius=60;
+	    indicator-thickness=10;
+	    font="JetBrainsMono Nerd Font";
+	    font-size=24;
+
+	    key-hl-color="6f3f89";
+	    bs-hl-color="ce104c";
+
+	    ring-color="005577";
+
+	    ring-clear-color="e3c401";
+	    inside-clear-color="e3c401";
+	    text-clear-color="191919";
+
+	    ring-wrong-color="c85577";
+	    inside-wrong-color="c85577";
+	    text-wrong-color="191919";
+
+	    ring-ver-color="a6e22e";
+	    inside-ver-color="a6e22e";
+	    text-ver-color="191919";
+
+	    ring-caps-lock-color="13c299";
+	    inside-caps-lock-color="13c299";
+	    caps-lock-key-hl-color="6f3f89";
+	    text-caps-lock-color="191919";
+    };
+  };
   programs.wlogout.enable = true;
   services.hypridle.enable = true;
   services.mako.enable = true;

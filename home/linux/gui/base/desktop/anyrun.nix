@@ -7,13 +7,11 @@
   programs.anyrun = {
     enable = true;
     config = {
-      plugins = with anyrun.packages.${pkgs.system}; [
-        applications
-        randr
-        rink
-        shell
-        symbols
-        translate
+      plugins = [
+        "${pkgs.anyrun}/lib/libapplications.so"
+        "${pkgs.anyrun}/lib/libsymbols.so"
+        "${pkgs.anyrun}/lib/libtranslate.so"
+        "${pkgs.anyrun}/lib/libshell.so"
       ];
 
       width.fraction = 0.3;
@@ -37,44 +35,44 @@
         font-size: 1.3rem;
       }
 
-      #window {
+      window {
         background: transparent;
       }
 
-      #plugin,
-      #main {
+      .plugin,
+      .main {
         border: 3px solid @border-col;
         color: @fg-col;
         background-color: @bg-col;
       }
       /* anyrun's input window - Text */
-      #entry {
+      .entry {
         color: @fg-col;
         background-color: @bg-col;
       }
 
       /* anyrun's output matches entries - Base */
-      #match {
+      .match {
         color: @fg-col;
         background: @bg-col;
       }
 
       /* anyrun's selected entry - Red */
-      #match:selected {
+      .match:selected {
         color: @fg-col2;
         background: @selected-col;
       }
 
-      #match {
+      .match {
         padding: 3px;
         border-radius: 16px;
       }
 
-      #entry, #plugin:hover {
+      .entry, .plugin:hover {
         border-radius: 16px;
       }
 
-      box#main {
+      box.main {
         background: rgba(30, 30, 46, 0.7);
         border: 1px solid @border-col;
         border-radius: 15px;

@@ -8,6 +8,8 @@
     [
       wireshark
       mitmproxy
+      keepassxc
+      discord
 
       ffmpeg-full
       viu
