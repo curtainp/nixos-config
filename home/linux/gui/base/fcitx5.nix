@@ -127,12 +127,10 @@
     toYAML {
       patch = {
         __include = "rime_ice_suggestion:/";
-        schema_list = [ { schema = "rime_ice"; } ];
-        ascii_composer.switch_key = {
-          # commit_code | commit_text | inline_ascii | clear | noop
-          Shift_L = "commit_code";
-          Shift_R = "commit_code";
-        };
+        schema_list = [
+          { schema = "rime_ice"; }
+          { schema = "double_pinyin_flypy"; }
+        ];
         menu.page_size = 5;
         switcher.hotkeys = [ "Control+F4" ];
       };
