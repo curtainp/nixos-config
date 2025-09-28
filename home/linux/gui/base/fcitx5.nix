@@ -36,44 +36,44 @@
           };
         };
         globalOptions = {
-          "Hotkey" = {
-            "TriggerKeys" = "";
-            "EnumerateWithTriggerKeys" = "True";
-            "AltTriggerKeys" = "";
-            "EnumerateBackwardKeys" = "";
-            "EnumerateSkipFirst" = "False";
-            "ModifierOnlyKeyTimeout" = "250";
-          };
-          "Hotkey/EnumerateForwardKeys" = {
-            "0" = "Control+Shift+Shift_L";
-          };
-          "Hotkey/EnumerateGroupForwardKeys" = {
-            "0" = "Control+space";
-          };
-          "Hotkey/EnumerateGroupBackwardKeys" = {
-            "0" = "Shift+Control+space";
-          };
-          "Hotkey/ActivateKeys" = {
-            "0" = "Hangul_Hanja";
-          };
-          "Hotkey/DeactivateKeys" = {
-            "0" = "Hangul_Romaja";
-          };
-          "Hotkey/PrevPage" = {
-            "0" = "Up";
-          };
-          "Hotkey/NextPage" = {
-            "0" = "Down";
-          };
-          "Hotkey/PrevCandidate" = {
-            "0" = "Shift+Tab";
-          };
-          "Hotkey/NextCandidate" = {
-            "0" = "Tab";
-          };
-          "Hotkey/TogglePreedit" = {
-            "0" = "Control+Alt+P";
-          };
+          # "Hotkey" = {
+          #   "TriggerKeys" = "";
+          #   "EnumerateWithTriggerKeys" = "True";
+          #   "AltTriggerKeys" = "";
+          #   "EnumerateBackwardKeys" = "";
+          #   "EnumerateSkipFirst" = "False";
+          #   "ModifierOnlyKeyTimeout" = "250";
+          # };
+          # "Hotkey/EnumerateForwardKeys" = {
+          #   "0" = "Control+Shift+Shift_L";
+          # };
+          # "Hotkey/EnumerateGroupForwardKeys" = {
+          #   "0" = "Control+space";
+          # };
+          # "Hotkey/EnumerateGroupBackwardKeys" = {
+          #   "0" = "Shift+Control+space";
+          # };
+          # "Hotkey/ActivateKeys" = {
+          #   "0" = "Hangul_Hanja";
+          # };
+          # "Hotkey/DeactivateKeys" = {
+          #   "0" = "Hangul_Romaja";
+          # };
+          # "Hotkey/PrevPage" = {
+          #   "0" = "Up";
+          # };
+          # "Hotkey/NextPage" = {
+          #   "0" = "Down";
+          # };
+          # "Hotkey/PrevCandidate" = {
+          #   "0" = "Shift+Tab";
+          # };
+          # "Hotkey/NextCandidate" = {
+          #   "0" = "Tab";
+          # };
+          # "Hotkey/TogglePreedit" = {
+          #   "0" = "Control+Alt+P";
+          # };
           "Behavior" = {
             "ActiveByDefault" = "False";
             "resetStateWhenFocusIn" = "No";
