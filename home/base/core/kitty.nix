@@ -43,6 +43,9 @@
       map ctrl+shift+home      scroll_home
       map ctrl+shift+end       scroll_end
       map ctrl+shift+h         show_scrollback
+
+      # Chinese font
+      symbol_map U+4E00-U+9FFF,U+3400-U+4DBF LXGW WenKai Screen
     '';
   };
 }
