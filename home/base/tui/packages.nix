@@ -59,13 +59,14 @@
 
   programs.ssh = {
     enable = true;
-    addKeysToAgent = "yes";
+    enableDefaultConfig = false;
     matchBlocks = {
       "github.com" = {
         hostname = "ssh.github.com";
         port = 443;
         user = "git";
         identitiesOnly = true;
+        addKeysToAgent = "yes";
       };
     };
   };
