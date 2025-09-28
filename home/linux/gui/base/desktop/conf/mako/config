@@ -1,4 +1,5 @@
 ## Mako configuration file
+#
 
 # GLOBAL CONFIGURATION OPTIONS
 max-history=100
