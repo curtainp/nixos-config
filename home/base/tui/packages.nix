@@ -25,6 +25,7 @@
     basedpyright
     (python313.withPackages (
       ps: with ps; [
+        capstone
         ruff
         black
         ipython
