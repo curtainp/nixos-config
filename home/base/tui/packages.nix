@@ -18,7 +18,6 @@
     pkgs-unstable.hugo
     cmake
     gcc
-    gdb
     clang-tools
 
     uv

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, pwndbg, ... }:
 {
   environment.variables.EDITOR = "nvim";
 
@@ -38,6 +38,6 @@
     direnv
     zoxide
     file
-
+    pwndbg.packages.${pkgs.system}.default
   ];
 }
