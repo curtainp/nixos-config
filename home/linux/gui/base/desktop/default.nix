@@ -40,6 +40,7 @@
       "mako".source = mkSymlink "${configPath}/mako";
       "waybar".source = mkSymlink "${configPath}/waybar";
       "wlogout".source = mkSymlink "${configPath}/wlogout";
+      "emacs".source = mkSymlink "${configPath}/emacs.d";
       "hypr/hypridle.conf".source = mkSymlink "${configPath}/hypridle.conf";
     };
 

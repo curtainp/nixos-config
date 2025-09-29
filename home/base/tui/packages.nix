@@ -29,6 +29,15 @@
         black
         ipython
         requests
+        epc
+        orjson
+        sexpdata
+        six
+        setuptools
+        paramiko
+        rapidfuzz
+        watchdog
+        packaging
       ]
     ))
 
