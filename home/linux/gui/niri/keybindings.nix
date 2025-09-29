@@ -128,7 +128,7 @@ niri: {
         (plain "Mod+Shift+Minus" [ (leaf "set-window-height" "-10%") ])
         (plain "Mod+Shift+Equal" [ (leaf "set-window-height" "+10%") ])
 
-        (plain "Mod+Shift+P" [ (flag "screenshot") ])
+        (plain "Mod+Shift+P" [ (leaf "spawn" ["flameshot" "gui"]) ])
         (plain "Ctrl+Print" [ (flag "screenshot-screen") ])
         (plain "Alt+Print" [ (flag "screenshot-window") ])
       ])
