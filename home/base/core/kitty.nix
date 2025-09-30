@@ -10,7 +10,6 @@
     settings = {
       macos_show_window_title_in = "none";
       macos_option_as_alt = true;
-      background_opacity = "0.93";
       wheel_scroll_min_lines = 1;
       window_padding_width = 4;
       confirm_os_window_close = 0;

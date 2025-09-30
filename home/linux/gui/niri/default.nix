@@ -48,7 +48,7 @@ in
       (import ./settings.nix niri)
       (import ./keybindings.nix niri)
       (import ./startup.nix niri)
-      # (import ./windowrules.nix niri)
+      (import ./windowrules.nix niri)
     ]
   );
 }
