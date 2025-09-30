@@ -40,4 +40,5 @@
     file
     pwndbg.packages.${pkgs.system}.default
   ];
+  environment.localBinInPath = true;
 }

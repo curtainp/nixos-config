@@ -13,6 +13,7 @@ niri: {
         (plain "Mod+Shift+Slash" [ (flag "show-hotkey-overlay") ])
         (plain "Mod+Return" [ (leaf "spawn" [ "kitty" ]) ])
         (plain "Mod+Space" [ (leaf "spawn" [ "walker" ]) ])
+        (plain "Mod+B" [ (leaf "spawn" [ "dmenu_bookmark" ]) ])
         (plain "CTRL+ALT+L" [ (leaf "spawn" [ "swaylock" ]) ])
 
         (plain "XF86AudioRaiseVolume" [

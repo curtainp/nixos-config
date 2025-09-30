@@ -31,6 +31,7 @@
     brightnessctl
     # hyprshot
     networkmanagerapplet
+    (writeShellScriptBin "dmenu_bookmark" (builtins.readFile ./scripts/dmenu_bookmark))
   ];
   xdg.configFile =
     let
@@ -43,6 +44,7 @@
       "waybar".source = mkSymlink "${configPath}/waybar";
       "wlogout".source = mkSymlink "${configPath}/wlogout";
       "emacs".source = mkSymlink "${configPath}/emacs.d";
+      "bookmarks".source = mkSymlink "${configPath}/bookmarks";
       "hypr/hypridle.conf".source = mkSymlink "${configPath}/hypridle.conf";
     };
 
@@ -95,6 +97,9 @@
     runAsService = true;
     config = {
       providers.desktopapplications.toggle_pin = "ctrl shift p";
+      providers.prefixes = [
+        { provider = "websearch"; prefix = "+"; }
+      ];
       keybinds = {
         quick_activate = ["ctrl 1" "ctrl 2" "ctrl 3" "ctrl 4"];
         next = "ctrl n";
