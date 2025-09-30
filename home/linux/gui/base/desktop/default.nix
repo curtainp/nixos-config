@@ -1,11 +1,13 @@
 {
   config,
   pkgs,
+  walker,
   ...
 }:
 {
   imports = [
-    ./anyrun.nix
+    # ./anyrun.nix
+    walker.homeManagerModules.default
     ./nvidia.nix
   ];
 
@@ -27,7 +29,7 @@
     swaybg
     wl-clipboard
     brightnessctl
-    hyprshot
+    # hyprshot
     networkmanagerapplet
   ];
   xdg.configFile =
@@ -83,6 +85,24 @@
 	    caps-lock-key-hl-color="6f3f89";
 	    text-caps-lock-color="191919";
     };
+  };
+  programs.elephant = {
+    enable = true;
+    installService = true;
+  };
+  programs.walker = {
+    enable = true;
+    runAsService = true;
+    config = {
+      providers.desktopapplications.toggle_pin = "ctrl shift p";
+      keybinds = {
+        quick_activate = ["ctrl 1" "ctrl 2" "ctrl 3" "ctrl 4"];
+        next = "ctrl n";
+        previous = "ctrl p";
+      };
+    };
+    # theme.style = ''
+    # '';
   };
   programs.wlogout.enable = true;
   services.hypridle.enable = true;

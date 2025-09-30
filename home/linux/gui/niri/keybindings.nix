@@ -12,7 +12,7 @@ niri: {
       (plain "binds" [
         (plain "Mod+Shift+Slash" [ (flag "show-hotkey-overlay") ])
         (plain "Mod+Return" [ (leaf "spawn" [ "kitty" ]) ])
-        (plain "Mod+Space" [ (leaf "spawn" [ "anyrun" ]) ])
+        (plain "Mod+Space" [ (leaf "spawn" [ "walker" ]) ])
         (plain "CTRL+ALT+L" [ (leaf "spawn" [ "swaylock" ]) ])
 
         (plain "XF86AudioRaiseVolume" [

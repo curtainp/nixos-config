@@ -63,7 +63,7 @@
   },
   "custom/launcher": {
     "format": "\uf313 ",
-    "on-click": "anyrun",
+    "on-click": "walker",
     "on-click-middle": "exec default_wall",
     "on-click-right": "exec wallpaper_random",
     "tooltip": false,

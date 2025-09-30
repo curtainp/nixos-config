@@ -15,10 +15,6 @@
       url = "github:nix-community/haumea/v0.2.2";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    anyrun = {
-      url = "github:Kirottu/anyrun";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     niri.url = "github:sodiboo/niri-flake";
     ida-pro-overlay = {
       url = "github:msanft/ida-pro-overlay";
@@ -29,13 +25,14 @@
       url = "github:pwndbg/pwndbg";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    walker.url = "github:abenz1267/walker";
   };
   nixConfig = {
     extra-substituters = [
-      "https://anyrun.cachix.org"
+      "https://walker.cachix.org"
     ];
     extra-trusted-public-keys = [
-      "anyrun.cachix.org-1:pqBobmOjI7nKlsUMV25u9QHa9btJK65/C8vnO3p346s="
+      "walker.cachix.org-1:fG8q+uAaMqhsMxWjwvk0IMb4mFPFLqHjuvfwQxE4oJM="
     ];
   };
   outputs = inputs: import ./outputs inputs;
