@@ -42,6 +42,9 @@
     "ss" 'consult-line
     "pf" 'project-find-file
     )
+  ;; fix org-cycle conflict with evil-jump-forward (both use tab key)
+  (with-eval-after-load 'evil-maps
+    (define-key evil-motion-state-map (kbd "TAB") nil))
   ;; color-rg integration with evil
   (evil-define-key nil space-leader-map
       "sg" 'color-rg-search-input

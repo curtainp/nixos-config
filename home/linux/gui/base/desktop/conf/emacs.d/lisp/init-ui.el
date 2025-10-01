@@ -118,12 +118,12 @@
         (locate-user-emacs-file "fontaine-latest-state.eld"))
   (setq fontaine-presets
         '((regular
-           :default-height 120
+           :default-height 140
            :default-weight regular
            :fixed-pitch-height 1.0
            :variable-pitch-height 1.0)
           (large
-           :default-height 180
+           :default-height 200
            :default-weight normal
            :fixed-pitch-height 1.0
            :variable-pitch-height 1.05)
