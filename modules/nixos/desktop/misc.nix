@@ -14,6 +14,7 @@
   ];
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
+  programs.xwayland.enable = true;
   security.sudo.keepTerminfo = true;
 
   environment.variables = {

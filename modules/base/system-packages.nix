@@ -38,6 +38,7 @@
     direnv
     zoxide
     file
+    xwayland-satellite
     pwndbg.packages.${pkgs.system}.default
   ];
   environment.localBinInPath = true;
