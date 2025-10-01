@@ -25,7 +25,11 @@
       url = "github:pwndbg/pwndbg";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    walker.url = "github:abenz1267/walker";
+    elephant.url = "github:abenz1267/elephant/381aa672e2cabbdef97aa10d31ba218f3ea70dc4";
+    walker = {
+      url = "github:abenz1267/walker";
+      inputs.elephant.follows = "elephant";
+    };
   };
   nixConfig = {
     extra-substituters = [

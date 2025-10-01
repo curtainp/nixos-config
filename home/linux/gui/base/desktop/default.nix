@@ -88,10 +88,6 @@
 	    text-caps-lock-color="191919";
     };
   };
-  programs.elephant = {
-    enable = true;
-    installService = true;
-  };
   programs.walker = {
     enable = true;
     runAsService = true;
