@@ -183,5 +183,8 @@
   :config
   (setq kdl-ts-mode-indent-offset 4))
 
+(use-package nix-ts-mode
+  :straight t
+  :mode "\\.nix\\'")
 
 (provide 'init-prog)
