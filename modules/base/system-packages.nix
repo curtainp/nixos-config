@@ -41,6 +41,7 @@
     xwayland-satellite
     nixd
     pwndbg.packages.${pkgs.system}.default
+    gdb
   ];
   environment.localBinInPath = true;
 }
