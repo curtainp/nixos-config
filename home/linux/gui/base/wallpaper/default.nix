@@ -28,8 +28,8 @@
           text = ''
             export WALLPAPERS_DIR="${wallpapers}"
             export WALLPAPERS_STATE_FILEPATH="${config.xdg.stateHome}/wallpaper-switcher/switcher_state"
-            export WALLPAPER_WAIT_MIN=60
-            export WALLPAPER_WAIT_MAX=180
+            export WALLPAPER_WAIT_MIN=3600
+            export WALLPAPER_WAIT_MAX=36000
             exec ${./wallpaper-switcher.py}
           '';
         }
