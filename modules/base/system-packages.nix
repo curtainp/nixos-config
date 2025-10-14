@@ -42,6 +42,7 @@
     nixd
     pwndbg.packages.${pkgs.system}.default
     gdb
+    gef # gdb with modern features
   ];
   environment.localBinInPath = true;
 }
