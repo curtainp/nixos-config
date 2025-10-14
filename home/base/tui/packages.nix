@@ -38,6 +38,7 @@
         rapidfuzz
         watchdog
         packaging
+        manim
       ]
     ))
 
