@@ -1,5 +1,5 @@
 {
-  time.timeZone = "Asia/Hong_Kong";
+  time.timeZone = "Asia/Shanghai";
 
   i18n = {
     defaultLocale = "en_US.UTF-8";
