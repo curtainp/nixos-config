@@ -632,7 +632,8 @@
         "nixpkgs-unstable": "nixpkgs-unstable",
         "pwndbg": "pwndbg",
         "stylix": "stylix",
-        "walker": "walker"
+        "walker": "walker",
+        "wallpapers": "wallpapers"
       }
     },
     "stylix": {
@@ -861,6 +862,23 @@
         "owner": "abenz1267",
         "repo": "walker",
         "type": "github"
+      }
+    },
+    "wallpapers": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1760411245,
+        "narHash": "sha256-GFeGKVv1AyyJe6i7GNjbqKNnOTDM0nReLyA/+gaTa6M=",
+        "ref": "refs/heads/main",
+        "rev": "aa85deb3cf828e980ca68d35a8d779072a78fbd6",
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/curtainp/wallpapers.git"
+      },
+      "original": {
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/curtainp/wallpapers.git"
       }
     },
     "xwayland-satellite-stable": {

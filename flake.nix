@@ -30,13 +30,15 @@
       url = "github:abenz1267/walker";
       inputs.elephant.follows = "elephant";
     };
+    wallpapers = {
+      url = "git+ssh://git@github.com/curtainp/wallpapers.git?shallow=1";
+      flake = false;
+    };
   };
   nixConfig = {
     extra-substituters = [
-      "https://walker.cachix.org"
     ];
     extra-trusted-public-keys = [
-      "walker.cachix.org-1:fG8q+uAaMqhsMxWjwvk0IMb4mFPFLqHjuvfwQxE4oJM="
     ];
   };
   outputs = inputs: import ./outputs inputs;
