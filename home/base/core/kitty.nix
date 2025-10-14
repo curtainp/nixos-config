@@ -7,6 +7,7 @@
       name = "Iosevka Nerd Font";
       size = 15;
     };
+    themeFile = "Doom_One";
     settings = {
       macos_show_window_title_in = "none";
       macos_option_as_alt = true;
