@@ -43,6 +43,9 @@
     pwndbg.packages.${pkgs.system}.default
     gdb
     gef # gdb with modern features
+
+    blender
+    davinci-resolve
   ];
   environment.localBinInPath = true;
 }
