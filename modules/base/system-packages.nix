@@ -43,6 +43,7 @@
     pwndbg.packages.${pkgs.system}.default
     gdb
     gef # gdb with modern features
+    nix-index # provide nix-locate which is invaluable to locate outputs of derivation
 
     blender
     davinci-resolve
