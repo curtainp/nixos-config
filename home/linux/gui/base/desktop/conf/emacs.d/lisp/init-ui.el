@@ -107,7 +107,7 @@
           (t . (rainbow bold 1))))
   (mapc #'disable-theme custom-enabled-themes)
   (if (display-graphic-p)
-      (ef-themes-load-random)
+      (load-theme 'ef-arbutus t)
     (ef-themes-load-random 'dark)))
 
 (use-package fontaine
